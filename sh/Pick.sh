@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 # Filename: Pick.sh
 command -v pick >/dev/null 2>&1 || { echo >&2 "I require pick but it's not installed.  Aborting."; exit 1; }
-command -v xdg-open >/dev/null 2>&1 || { echo >&2 "I require xdg-open but it's not installed.  Aborting."; exit 1; }
 trap 'echo you hit Ctrl-C/Ctrl-\, now exiting..; exit' SIGINT SIGQUIT
 TMP_SCRIPT_NAME=$(mktemp)
 
@@ -15,7 +14,7 @@ function _runScript() {
 me=`basename $0`
 case $1 in
     '')
-        _runScript xdg-open
+        _runScript cat
         ;;
     '-h')
         echo "ls -1 | $me cat"
