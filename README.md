@@ -16,3 +16,8 @@ tree 결과를 브라우저에서 보여준다. 파일 확장자를 인자로 �
     $ Tree.sh html
 
 ![Tree.sh screenshot](https://afrontend.files.wordpress.com/2017/01/tree-sh.png)
+
+#### 사용 예
+
+    $ Tree.sh js
+    $ Tree.sh css
