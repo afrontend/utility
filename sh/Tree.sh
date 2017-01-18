@@ -12,7 +12,7 @@ function htmlTree() {
     if [ -z "$1" ]; then
         tree -I 'node_modules|bower_components' -H file://"$(readlink -f .)" > "$tempHtmlTreeFile"
     else
-        echo "$1"
+        #echo "$1"
         tree -I 'node_modules|bower_components' -P "*.$1" -H file://"$(readlink -f .)" > "$tempHtmlTreeFile"
     fi
     iconv -t utf8 "$tempHtmlTreeFile" > "$htmlTreeFile"
